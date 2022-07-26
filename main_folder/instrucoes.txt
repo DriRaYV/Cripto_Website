@@ -1,0 +1,1 @@
+Estrutura do projeto, para melhor organização e menos problemas, deve ficar parecida com a da plataforma V2. Há uma pasta principal onde os projetos estão, onde cada um deles possui seus próprios componentes e telas o que ajuda na hora de integrar os endpoints (eu acredito).
