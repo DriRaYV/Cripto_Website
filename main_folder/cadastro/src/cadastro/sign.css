@@ -117,6 +117,10 @@ input{
     font-weight: 600;
 }
 
+#botao:hover{
+    background-color: #c27800;
+}
+
 .div-label{
     font-size: 2rem;
     font-weight: 600;

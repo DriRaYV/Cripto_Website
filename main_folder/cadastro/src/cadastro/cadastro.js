@@ -94,7 +94,7 @@ function App () {
             </div>
           </div>
           <div id='div-botao'>
-            <input type='submit' value='CADASTRE-SE' id='botao'></input>
+            <input type='button' value='CADASTRE-SE' id='botao'></input>
           </div>
         </form>
       </div>
