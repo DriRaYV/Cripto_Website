@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    --cor-background-escuro: #2B2A2A;
+    --cor-background-claro: #5F5F5F;
+    --cor-background-input: #BDBDBD;
+    --cor-fonte-principal: #FFB742;
+    --cor-fonte-secundaria: #D6DBDF;
+    --cor-fonte-botao: #212529;
+}
+
+h1{
+    color: var(--cor-fonte-principal);
+}
+
+form{
+    height: 100%;
+    width: 100%;
+}
+
+label{
+    margin: 3% 0 0 0;
+}
+
+input{
+    border-radius: 30px;
+    border: 0;
+    background-color: var(--cor-background-input);
+    height: 50px;
+    font-size: 1.3rem;
+    padding: 0 0 0 5px;
+    width: 90%;
+}
+
+h3{
+    width: 100%;
+    text-align: center;
+    margin: 4% 0 0 0;
+    color: var(--cor-fonte-secundaria);
+    font-size: 1.5rem;
+}
+
+a{
+    color: var(--cor-fonte-principal);
+    text-decoration: none;
+}
+
+a:hover{
+    color: #b36e00;
+    text-decoration: none;
+}
+
+#fundo-escuro{
+    background-color: var(--cor-background-escuro);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fundo-claro{
+    background-color: var(--cor-background-claro);
+    width: 80%;
+    height: 80%;
+    border-radius: 30px;
+}
+
+#title{
+    width: 100%;
+    text-align: center;
+    margin: 3% 0 0 0;
+    font-size: 270%;
+}
+
+#information{
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#informacao-esquerda{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-botao{
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+#botao{
+    width: 250px;
+    height: 50px;
+    background-color: var(--cor-fonte-principal);
+    color: var(--cor-fonte-botao);
+    font-weight: 600;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+#botao:hover{
+    background-color: #ffffff;
+}
+
+.div-label{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor-fonte-secundaria);
+    width: 100%;
+}
