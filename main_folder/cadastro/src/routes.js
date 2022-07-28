@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './login/login';
 import Carteira from './carteira/carteira'
 import App from './cadastro/cadastro';
+// import Perfil from './perfil/perfil'
+// import Inicio from './inicio/inicio'
 
 function MainRoutes (){ 
     return (
@@ -10,6 +12,7 @@ function MainRoutes (){
             <Route path="/" element={<Login />} />
             <Route path="/cadastro" element={<App />} />
             <Route path="/carteira" element={<Carteira />} />
+            {/* <Route path="/perfil" element={<Perfil />} /> */}
             {/* <Route path="/inicio" element={<Inicio />} /> */}
         </Routes>
     )
