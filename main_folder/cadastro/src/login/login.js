@@ -1,5 +1,6 @@
 import './inicial.css';
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom"
 
 function Login () {
 
@@ -18,18 +19,18 @@ function Login () {
 
         <form onSubmit={handleSubmit(GetData)}>
           <div id='information'>
-                <div id='informacao-esquerda'>
-                    <div className='div-label'>
+                <div id='informacao'>
+                    <div className='label-div'>
                         <label>
                             Nome de usuário:
-                            <div className='div-input'>
+                            <div className='input-div'>
                                 <input type="text" id='inputUsername' {... register("userName")} />
                             </div>
                         </label>
-
+                        <br/>
                         <label>
                             Insira sua senha:
-                            <div className='div-input'>
+                            <div className='input-div'>
                                 <input type="password" className='inputSenha' {... register("password")} />
                             </div>
                         </label>
@@ -39,7 +40,7 @@ function Login () {
             <div id='div-botao'>
                 <button type='submit' id='botao'>ENTRAR</button>
             </div>
-            <h3>Não possui conta? <a href="">Cadastre-se</a></h3>
+            <h3>Não possui conta? <Link to='/cadastro'>CADASTRE-SE</Link></h3>
         </form>
       </div>
     </div>

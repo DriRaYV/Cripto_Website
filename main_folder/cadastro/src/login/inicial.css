@@ -85,7 +85,7 @@ a:hover{
     align-items: center;
 }
 
-#informacao-esquerda{
+#informacao{
     width: 50%;
     height: 100%;
     display: flex;
@@ -114,7 +114,7 @@ a:hover{
     background-color: #ffffff;
 }
 
-.div-label{
+.label-div{
     font-size: 2rem;
     font-weight: 600;
     color: var(--cor-fonte-secundaria);

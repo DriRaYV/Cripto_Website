@@ -1,4 +1,4 @@
-import './sign.css';
+import './cadastre-se.css';
 import { useForm } from "react-hook-form";
 
 function App () {
