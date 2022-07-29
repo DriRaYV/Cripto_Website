@@ -1,7 +1,8 @@
-import './carteira.css';
-import  { FaWallet } from 'react-icons/fa'
-import wallet from './wallet.png'
-function Carteira () {
+import './wallet.css';
+import  { FaWallet } from 'react-icons/fa';
+import wallet from './wallet.png';
+
+function Wallet () {
   return (
      <main>
         <header>
@@ -39,4 +40,4 @@ function Carteira () {
   );
 }
 
-export default Carteira;
+export default Wallet;

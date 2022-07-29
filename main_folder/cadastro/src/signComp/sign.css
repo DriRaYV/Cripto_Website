@@ -36,7 +36,7 @@ input{
     padding: 0 0 0 5px;
 }
 
-#fundo-escuro{
+#dark-background{
     background-color: var(--cor-background-escuro);
     width: 100vw;
     height: 100vh;
@@ -45,7 +45,7 @@ input{
     align-items: center;
 }
 
-#fundo-claro{
+#light-background{
     background-color: var(--cor-background-claro);
     width: 80%;
     height: 80%;
@@ -59,14 +59,14 @@ input{
     font-size: 270%;
 }
 
-#informacoes{
+#information{
     height: 78%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#informacao-esquerda{
+#left-information{
     width: 50%;
     height: 100%;
     display: flex;
@@ -74,7 +74,7 @@ input{
     align-items: center;
 }
 
-#informacao-direita{
+#right-information{
     width: 50%;
     height: 100%;
     display: flex;
@@ -82,11 +82,11 @@ input{
     align-items: center;
 }
 
-#div-info-maior{
+#div-info-large{
     margin-bottom: 3%;
 }
 
-#div-info-menor{
+#div-info-small{
     display: flex;
     justify-content: space-around;
 }
@@ -142,15 +142,15 @@ input{
     margin: 1% 0 0 0;
 }
 
-.input-esquerda{
+.input-left{
     width: 100%;
 }
 
-.input-direita{
+.input-right{
     width: 90%;
 }
 
-.direita{
+.right{
     width: 80%;
     height: 50px;
 }

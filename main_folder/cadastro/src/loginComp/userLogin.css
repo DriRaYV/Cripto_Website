@@ -74,18 +74,18 @@ a:hover{
 #title{
     width: 100%;
     text-align: center;
-    margin: 3% 0 0 0;
+    margin: 3% 0 5% 0;
     font-size: 270%;
 }
 
-#information{
+#information2{
     height: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#informacao{
+#information3{
     width: 50%;
     height: 100%;
     display: flex;
@@ -93,13 +93,13 @@ a:hover{
     align-items: center;
 }
 
-#div-botao{
+#div-button{
     margin: 0 0 0 0;
     display: flex;
     justify-content: center;
 }
 
-#botao{
+#button2{
     width: 250px;
     height: 50px;
     background-color: var(--cor-fonte-principal);
@@ -110,7 +110,7 @@ a:hover{
     font-size: 1.5rem;
 }
 
-#botao:hover{
+#button2:hover{
     background-color: #ffffff;
 }
 

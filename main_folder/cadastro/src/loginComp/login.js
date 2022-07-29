@@ -1,4 +1,4 @@
-import './inicial.css';
+import './userLogin.css';
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom"
 
@@ -7,7 +7,8 @@ function Login () {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
   function GetData(userData){
-    console.log(userData)
+      const userName = (`userName: ${userData.userName}`)
+      const password = (`password: ${userData.password}`)
   }
 
   return (
@@ -18,13 +19,17 @@ function Login () {
         </h1>
 
         <form onSubmit={handleSubmit(GetData)}>
-          <div id='information'>
-                <div id='informacao'>
+          <div id='information2'>
+                <div id='information3'>
                     <div className='label-div'>
                         <label>
                             Nome de usuário:
                             <div className='input-div'>
-                                <input type="text" id='inputUsername' {... register("userName")} />
+                                <input 
+                                  type="text" 
+                                  id='inputUsername' 
+                                  {... register("userName")}
+                                />
                             </div>
                         </label>
                         <br/>
@@ -37,7 +42,7 @@ function Login () {
                     </div>
                 </div>
             </div>
-            <div id='div-botao'>
+            <div id='div-button'>
                 <button type='submit' id='botao'>ENTRAR</button>
             </div>
             <h3>Não possui conta? <Link to='/cadastro'>CADASTRE-SE</Link></h3>
