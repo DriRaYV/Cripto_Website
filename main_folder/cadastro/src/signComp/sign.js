@@ -4,29 +4,29 @@ import {  useState } from 'react';
 
 function Sign() {
 
-  var [username, setUsername] = useState()
-  var [password, setPassword] = useState()
-  var [password2, setPassword2] = useState()
-  var [cep, setCep] = useState()
-  var [address, setAddress] = useState()
-  var [number, setNumber] = useState()
-  var [district, setDistrict] = useState()
-  var [city, setCity] = useState()
-  var [uf, setUf] = useState()
+  const [username, setUsername] = useState()
+  const [password, setPassword] = useState()
+  const [password2, setPassword2] = useState()
+  const [cep, setCep] = useState()
+  const [address, setAddress] = useState()
+  const [number, setNumber] = useState()
+  const [district, setDistrict] = useState()
+  const [city, setCity] = useState()
+  const [uf, setUf] = useState()
 
 
   const { register, handleSubmit,setValue } = useForm();
 
   function GetData(userData) {
-    var signUserName = (`${userData.userName}`)
-    var signPassword = (`${userData.password}`)
-    var signConfirmPassword = (`${userData.confirmPassword}`)
-    var signCep = (`${userData.cep}`)
-    var signAddress = (`${userData.address}`)
-    var signNumber = (`${userData.number}`)
-    var signDistrict = (`${userData.district}`)
-    var signCity = (`${userData.city}`)
-    var signUf = (`${userData.uf}`)
+    const signUserName = (`${userData.userName}`)
+    const signPassword = (`${userData.password}`)
+    const signConfirmPassword = (`${userData.confirmPassword}`)
+    const signCep = (`${userData.cep}`)
+    const signAddress = (`${userData.address}`)
+    const signNumber = (`${userData.number}`)
+    const signDistrict = (`${userData.district}`)
+    const signCity = (`${userData.city}`)
+    const signUf = (`${userData.uf}`)
 
     setUsername(signUserName)
     setPassword(signPassword)
