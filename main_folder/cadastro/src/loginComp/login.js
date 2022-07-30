@@ -18,8 +18,8 @@ function Login () {
       setPassword(loginPassword)
   }
 
-  const verifyLogin  = () =>{
-    fetch("https://musicapig.herokuapp.com/users/login ", {
+  const verifyLogin = () =>{
+    fetch('https://musicapig.herokuapp.com/users/login', {
       headers: {
         'Content-Type': 'application/json'
       },

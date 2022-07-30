@@ -68,7 +68,7 @@ function Sign() {
 
     const submitData = () =>{
       
-      fetch('https://musicapig.herokuapp.com/users', {
+      fetch(`https://musicapig.herokuapp.com/users`, {
           method: "POST",
           headers:{
               'Content-Type':"application/json"

@@ -5,7 +5,7 @@ import Wallet from './walletComp/wallet'
 import Sign from './signComp/sign';
 import NavBar from './navBarComp/navBar'
 // import Perfil from './perfil/perfil'
-// import Inicio from './inicio/inicio'
+import Menu from './menuComp/menu'
 
 function MainRoutes (){ 
     return (
@@ -15,7 +15,7 @@ function MainRoutes (){
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/navBar" element={<NavBar />} />
             {/* <Route path="/user" element={<User />} /> */}
-            {/* <Route path="/menu" element={<Menu />} /> */}
+            <Route path="/home" element={<Menu/>} /> 
         </Routes>
     )
 }
