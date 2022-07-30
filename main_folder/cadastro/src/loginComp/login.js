@@ -1,16 +1,52 @@
 import './userLogin.css';
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom"
+import { useState } from 'react'
 
 function Login () {
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit } = useForm();
 
+  const [username, setUsername] = useState()
+  const [password, setPassword] = useState()
+  
   function GetData(userData){
-      const userName = (`userName: ${userData.userName}`)
-      const password = (`password: ${userData.password}`)
+      const loginUserName = (`${userData.userName}`)
+      const loginPassword = (`${userData.password}`)
+
+      setUsername(loginUserName)
+      setPassword(loginPassword)
   }
 
+  const verifyLogin  = () =>{
+    fetch("https://musicapig.herokuapp.com/users/login ", {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        username: username,
+        password_user: password
+      })
+    }).then(response => verify(response))
+
+    async function verify(response) {
+      const { message } = await response.json()
+      const { status } = response
+  
+      if (status === 500) {
+        alert(`erro no servidor: ${console.error}`)
+      } else if (status === 401) {
+        alert(message)
+        // window.location('/inicio')
+      } else if (status === 404) {
+        alert(message)
+      }
+    }
+    }
+    console.log(username,password )
+
+  
   return (
     <div id='fundo-escuro'>
       <div id='fundo-claro'>
@@ -18,7 +54,7 @@ function Login () {
             Seja bem vindo!!<br/><br/> Login:
         </h1>
 
-        <form onSubmit={handleSubmit(GetData)}>
+        <form onChange={handleSubmit(GetData)}>
           <div id='information2'>
                 <div id='information3'>
                     <div className='label-div'>
@@ -43,9 +79,9 @@ function Login () {
                 </div>
             </div>
             <div id='div-button'>
-                <button type='submit' id='botao'>ENTRAR</button>
+                <button type='submit' id='botao' onClick={verifyLogin}>ENTRAR</button>
             </div>
-            <h3>Não possui conta? <Link to='/cadastro'>CADASTRE-SE</Link></h3>
+            <h3>Não possui conta? <Link to='/SignUp'>CADASTRE-SE</Link></h3>
         </form>
       </div>
     </div>
