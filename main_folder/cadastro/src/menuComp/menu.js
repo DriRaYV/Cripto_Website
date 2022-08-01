@@ -1,9 +1,18 @@
 import './menu.css'
+import { Link } from "react-router-dom"
 
 function Menu() {
 
 return (
   <div id='div-suprema'>
+     <div className='box1'>
+        <h2 id='GBIT'>GBIT 〽️</h2>
+        <div id="topics-nav">
+            <Link to="/user" className='topic1'>MEU PERFIL</Link>
+            <Link to="/home" className='topic1'>INÍCIO</Link>
+            <Link to="/wallet" className='topic1'>MINHA CARTEIRA</Link>
+      </div>
+  </div>
     <div id='cotainer'>
       <div id="welcome-title">
         <h1>Olá, Maria! 👋</h1>
@@ -64,4 +73,4 @@ return (
 );
   }
 
-export { Menu };
+export default Menu;

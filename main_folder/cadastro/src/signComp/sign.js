@@ -118,7 +118,7 @@ function Sign() {
       <div id='light-background'>
         <h1 id='title'>Vamos cadastrar o seu perfil?</h1>
 
-        <form onChange={handleSubmit(GetData)}>
+        <form id='form1' onChange={handleSubmit(GetData)}>
           <div id='information'>
             <div id='left-information'>
               <div className='div-label'>

@@ -1,17 +1,18 @@
 import './wallet.css';
 import  { FaWallet } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
 import wallet from './wallet.png';
 
 function Wallet () {
   return (
      <main>
         <header>
-          <div className='box1'>
+          <div className='box12'>
             <h2>GBIT 〽️</h2>
-            <div id="topics-nav">
-              <p className='topic1'>MEU PERFIL</p>
-              <p className='topic1'>INÍCIO</p>
-              <p className='topic1'>MINHA CARTEIRA</p>
+            <div id="topics-nav2">
+              <Link to="/user" className='topic1'>MEU PERFIL</Link>
+              <Link to="/home" className='topic1'>INÍCIO</Link>
+              <Link to="/wallet" className='topic1'>MINHA CARTEIRA</Link>
             </div>
           </div>
 

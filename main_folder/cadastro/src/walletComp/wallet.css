@@ -90,8 +90,8 @@ footer{
 
 }
 
-#topics-nav{
-    margin: auto 38%;
+#topics-nav2{
+    margin: auto;
     width: 21%;
     padding: 1%;
 }
@@ -118,4 +118,8 @@ header h2{
 
 #p-coin-market{
     color: rgb(216, 215, 215);
+}
+
+.box12{
+    background-color: #171718;
 }
