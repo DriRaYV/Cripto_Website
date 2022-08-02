@@ -10,12 +10,44 @@ function Menu() {
   }
 }).then(response => response.json())
 .then(response => ()=>{
-  console.log(response)
+  var moeda1 = response[0]
+  var moeda2 = response[1]
+  var moeda3 = response[2]
+  var moeda4 = response[3]
+  var moeda5 = response[4]
+  var moeda6 = response[5]
+  var moeda7 = response[6]
+  var moeda8 = response[7]
+  var moeda9 = response[8]
+  var moeda10 = response[10]
 })
   }
 
 return (
   <div id='div-suprema'>
+    
+    {  function afuncao() {
+      fetch("https://musicapig.herokuapp.com/coins",{
+    method:"GET",
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }).then(response => response.json())
+  .then(response => ()=>{
+    const moeda1 = response[0]
+    const moeda2 = response[1]
+    const moeda3 = response[2]
+    const moeda4 = response[3]
+    const moeda5 = response[4]
+    const moeda6 = response[5]
+    const moeda7 = response[6]
+    const moeda8 = response[7]
+    const moeda9 = response[8]
+    const moeda10 = response[10]
+    console.log(moeda1);
+  })
+    }}
+    
      <div className='box1'>
         <h2 id='GBIT'>GBIT 〽️</h2>
         <div id="topics-nav">
@@ -42,18 +74,18 @@ return (
               <p id='j'>5</p>
             </div>
             <div className='coin-name spacing-table2'>
-              <p id='one'>BITCOIN</p>
-              <p id='two'>ETHEREUM</p>
-              <p id='three'>BUSD</p>
-              <p id='four'>BNB</p>
-              <p id='five'>BUSD</p>
+              <p id='one'>{moeda1.name}</p>
+              <p id='two'>{moeda2.name}</p>
+              <p id='three'>{moeda3.name}</p>
+              <p id='four'>{moeda4.name}</p>
+              <p id='five'>{moeda5.name}</p>
             </div>
             <div className='coin-price spacing-table3'>
-              <p id='a'>19.991,30USD</p>
-              <p id='b'>1.098,64USD</p>
-              <p id='c'>1,0008USD</p>
-              <p id='d'>225,77USD</p>
-              <p id='e'>1,0008USD</p>
+              <p id='a'>{moeda1.price}</p>
+              <p id='b'>{moeda2.price}</p>
+              <p id='c'>{moeda3.price}</p>
+              <p id='d'>{moeda4.price}</p>
+              <p id='e'>{moeda5.price}</p>
             </div>
             <div className='coin-number spacing-table'>
               <p>6</p>
@@ -63,18 +95,18 @@ return (
               <p>10</p>
             </div>
             <div className='coin-name spacing-table5'>
-              <p>BITCOIN</p>
-              <p>ETHEREUM</p>
-              <p>BUSD</p>
-              <p>BNB</p>
-              <p>BUSD</p>
+              <p>{moeda6.name}</p>
+              <p>{moeda7.name}</p>
+              <p>{moeda8.name}</p>
+              <p>{moeda9.name}</p>
+              <p>{moeda10.name}</p>
             </div>
             <div className='coin-price spacing-table6'>
-              <p>19.991,30USD</p>
-              <p>1.098,64USD</p>
-              <p>1,0008USD</p>
-              <p>225,77USD</p>
-              <p>1,0008USD</p>
+              <p>{moeda6.price}</p>
+              <p>{moeda7.price}</p>
+              <p>{moeda8.price}</p>
+              <p>{moeda9.price}</p>
+              <p>{moeda10.price}</p>
             </div>
           </div>
         </div>
