@@ -2,6 +2,17 @@ import './menu.css'
 import { Link } from "react-router-dom"
 
 function Menu() {
+  function afuncao() {
+    fetch("https://musicapig.herokuapp.com/coins",{
+  method:"GET",
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(response => response.json())
+.then(response => ()=>{
+  console.log(response)
+})
+  }
 
 return (
   <div id='div-suprema'>
@@ -69,6 +80,7 @@ return (
         </div>
       </div>
     </div>
+    <button onClick={afuncao}>popopo</button>
   </div>
 );
   }
