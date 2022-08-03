@@ -11,11 +11,11 @@ function MainRoutes (){
     return (
         <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/signUp" element={<Sign />} />
-            <Route path="/wallet" element={<Wallet />} />
-            <Route path="/navBar" element={<NavBar />} />
-            <Route path="/user" element={<User />} />
-            <Route path="/home" element={<Menu/>} /> 
+            <Route path="/cadastro" element={<Sign />} />
+            <Route path="/carteira" element={<Wallet />} />
+            <Route path="/barra-de-navegação" element={<NavBar />} />
+            <Route path="/usuário" element={<User />} />
+            <Route path="/inicio" element={<Menu/>} /> 
         </Routes>
     )
 }

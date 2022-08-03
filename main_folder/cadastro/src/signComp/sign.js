@@ -156,7 +156,7 @@ function Sign() {
                   </label>
                 </div>
 
-                <div id='div-endereco'>
+                <div id='div-address'>
                   <label>
                     Endereço:
                     <div className='div-input2'>
@@ -199,7 +199,7 @@ function Sign() {
             </div>
           </div>
           <div id='div-button'>
-            <button type='submit' id='botao' onClick={submitData}>CADASTRE-SE</button>
+            <button type='submit' id='bottom' onClick={submitData}>CADASTRE-SE</button>
           </div>
         </form>
       </div>

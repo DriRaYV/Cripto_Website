@@ -45,8 +45,6 @@ function Login () {
       }
     }
     }
-    console.log(username,password )
-
   
   return (
     <div id='fundo-escuro'>
@@ -80,9 +78,9 @@ function Login () {
                 </div>
             </div>
             <div id='div-button'>
-                <button type='submit' id='botao' onClick={verifyLogin}>ENTRAR</button>
+                <button type='submit' id='button2' onClick={verifyLogin}>ENTRAR</button>
             </div>
-            <h3>Não possui conta? <Link to='/SignUp'>CADASTRE-SE</Link></h3>
+            <h3>Não possui conta? <Link to='/cadastro'>CADASTRE-SE</Link></h3>
         </form>
       </div>
     </div>

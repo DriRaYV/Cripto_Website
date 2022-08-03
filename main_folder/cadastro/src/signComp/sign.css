@@ -91,7 +91,8 @@ input{
     justify-content: space-around;
 }
 
-#label-endereco{
+#label-endereco
+{
   margin: 2% 0 0 0; 
 }
 
@@ -99,7 +100,7 @@ input{
     margin: 0 0 2% 0;
 }
 
-#div-endereco{
+#div-address{
     margin: 0 0 0 0;
 }
 
@@ -109,7 +110,7 @@ input{
     justify-content: center;
 }
 
-#botao{
+#bottom{
     width: 250px;
     height: 50px;
     background-color: var(--cor-fonte-principal);
@@ -120,7 +121,7 @@ input{
     font-size: 1.5rem;
 }
 
-#botao:hover{
+#bottom:hover{
     background-color: #c27800;
 }
 

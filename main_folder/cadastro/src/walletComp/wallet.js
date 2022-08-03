@@ -10,9 +10,9 @@ function Wallet () {
           <div className='box12'>
             <h2>GBIT 〽️</h2>
             <div id="topics-nav2">
-              <Link to="/user" className='topic1'>MEU PERFIL</Link>
-              <Link to="/home" className='topic1'>INÍCIO</Link>
-              <Link to="/wallet" className='topic1'>MINHA CARTEIRA</Link>
+              <Link to="/usuário" className='topic1'>MEU PERFIL</Link>
+              <Link to="/inicio" className='topic1'>INÍCIO</Link>
+              <Link to="/carteira" className='topic1'>MINHA CARTEIRA</Link>
             </div>
           </div>
 

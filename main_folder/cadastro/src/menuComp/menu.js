@@ -2,7 +2,7 @@ import './menu.css'
 import { Link } from "react-router-dom"
 
 function Menu() {
-  function afuncao() {
+  function coinfunction() {
     fetch("https://musicapig.herokuapp.com/coins",{
   method:"GET",
   headers:{
@@ -26,7 +26,7 @@ function Menu() {
 return (
   <div id='div-suprema'>
     
-    {  function afuncao() {
+    {  function coinfunction() {
       fetch("https://musicapig.herokuapp.com/coins",{
     method:"GET",
     headers:{
@@ -44,16 +44,15 @@ return (
     const moeda8 = response[7]
     const moeda9 = response[8]
     const moeda10 = response[10]
-    console.log(moeda1);
   })
     }}
     
      <div className='box1'>
         <h2 id='GBIT'>GBIT 〽️</h2>
         <div id="topics-nav">
-            <Link to="/user" className='topic1'>MEU PERFIL</Link>
-            <Link to="/home" className='topic1'>INÍCIO</Link>
-            <Link to="/wallet" className='topic1'>MINHA CARTEIRA</Link>
+            <Link to="/usuário" className='topic1'>MEU PERFIL</Link>
+            <Link to="/inicio" className='topic1'>INÍCIO</Link>
+            <Link to="/carteira" className='topic1'>MINHA CARTEIRA</Link>
       </div>
   </div>
     <div id='cotainer'>
@@ -112,7 +111,6 @@ return (
         </div>
       </div>
     </div>
-    <button onClick={afuncao}>popopo</button>
   </div>
 );
   }
