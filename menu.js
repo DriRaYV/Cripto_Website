@@ -5,7 +5,7 @@ function Menu () {
         <div id='div-suprema'>
           <div id='cotainer'>
           <div id="welcome-title">
-            <h1>Olá, Maria! 👋</h1>
+            <h1>Olá! 👋</h1>
           </div>
           <div id='subtitle'>
             <h3> Vai um Bit?</h3>
