@@ -54,7 +54,8 @@ return (
             <Link to="/inicio" className='topic1'>INÍCIO</Link>
             <Link to="/carteira" className='topic1'>MINHA CARTEIRA</Link>
       </div>
-      <div id="cotainer">
+    </div>
+    <div id="cotainer">
         <div id="welcome-title">
           <h1>Olá, Maria! 👋</h1>
         </div>
@@ -110,7 +111,6 @@ return (
           </div>
         </div>
       </div>
-    </div>
   </div>
 );
   }
