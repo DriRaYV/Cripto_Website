@@ -55,7 +55,7 @@ a:hover{
     text-decoration: none;
 }
 
-#fundo-escuro{
+#fundo-black{
     background-color: var(--cor-background-escuro);
     width: 100vw;
     height: 100vh;
@@ -64,28 +64,28 @@ a:hover{
     align-items: center;
 }
 
-#fundo-claro{
+#fundo-light{
     background-color: var(--cor-background-claro);
     width: 80%;
     height: 80%;
     border-radius: 30px;
 }
 
-#title{
+#title-comprar{
     width: 100%;
     text-align: center;
     margin: 3% 0 5% 0;
     font-size: 270%;
 }
 
-#information2{
+#information2-comprar{
     height: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#information3{
+#information3-comprar{
     width: 50%;
     height: 100%;
     display: flex;
@@ -93,13 +93,13 @@ a:hover{
     align-items: center;
 }
 
-#div-button{
+#div-button-comprar{
     margin: 0 0 0 0;
     display: flex;
     justify-content: center;
 }
 
-#button2{
+#button2-comprar{
     width: 250px;
     height: 50px;
     background-color: var(--cor-fonte-principal);
@@ -110,11 +110,11 @@ a:hover{
     font-size: 1.5rem;
 }
 
-#button2:hover{
+#button2-comprar:hover{
     background-color: #ffffff;
 }
 
-.label-div{
+.label-div-comprar{
     font-size: 2rem;
     font-weight: 600;
     color: var(--cor-fonte-secundaria);

@@ -4,19 +4,19 @@ import { Link } from "react-router-dom"
 function Comprar () {
   
   return (
-    <div id='fundo-escuro'>
-      <div id='fundo-claro'>
-        <h1 id='title'>
-            Vamos Comprar?<br/><br/> 
+    <div id='fundo-black'>
+      <div id='fundo-light'>
+        <h1 id='title-comprar'>
+            Vamos Comprar?<br/> 
         </h1>
 
         <form >
-          <div id='information2'>
-                <div id='information3'>
-                    <div className='label-div'>
+          <div id='information2-comprar'>
+                <div id='information3-comprar'>
+                    <div className='label-div-comprar'>
                         <label>
                            Selecione a opção de compra
-                            <div className='input-div'>
+                            <div className='input-div-comprar'>
                                 <select>
                                   <option>Bitcoin</option>
                                   <option>Ethereun</option>
@@ -35,15 +35,15 @@ function Comprar () {
                         <br/>
                         <label>
                             Quantidade
-                            <div className='input-div'>
-                                <input type="password" className='inputSenha'/>
+                            <div className='input-div-comprar'>
+                                <input type="password" className='inputSenha-comprar'/>
                             </div>
                         </label>
                     </div>
                 </div>
             </div>
-            <div id='div-button'>
-                <button type='submit' id='button2' >Comprar</button>
+            <div id='div-button-comprar'>
+                <button type='submit' id='button2-comprar' >Comprar</button>
             </div>
             <h3>Acessar Minha<Link to='/carteira'>Carteira</Link></h3>
         </form>

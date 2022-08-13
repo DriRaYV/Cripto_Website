@@ -48,7 +48,7 @@ function Login () {
     <div id='fundo-escuro'>
       <div id='fundo-claro'>
         <h1 id='title'>
-            Seja bem vindo!!<br/><br/> Login:
+            Seja bem vindo!!<br/>Login:
         </h1>
 
         <form onChange={handleSubmit(GetData)}>
