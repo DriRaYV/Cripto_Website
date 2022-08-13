@@ -6,6 +6,7 @@ import Sign from './signComp/sign';
 import NavBar from './navBarComp/navBar'
  import User from './userComp/App'
 import Menu from './menuComp/menu'
+import Comprar from './menuComp/comprar'
 
 function MainRoutes (){ 
     return (
@@ -16,6 +17,7 @@ function MainRoutes (){
             <Route path="/barra-de-navegação" element={<NavBar />} />
             <Route path="/usuário" element={<User />} />
             <Route path="/inicio" element={<Menu/>} /> 
+            <Route path="/comprar" element={<Comprar/>} /> 
         </Routes>
     )
 }

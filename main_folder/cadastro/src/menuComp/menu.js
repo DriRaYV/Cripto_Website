@@ -1,52 +1,32 @@
 import "./menu.css";
 import { Link } from "react-router-dom";
+import React from "react";
+import DataFetching from "./coinFetchs/fetchCoin";
+import DataFetching2 from "./coinFetchs/fetchCoin2";
+import DataFetching3 from "./coinFetchs/fetchCoin3.js";
+import DataFetching4 from "./coinFetchs/fetchCoin4.js";
+import DataFetching5 from "./coinFetchs/fetchCoin5";
+import DataFetching6 from "./coinFetchs/fetchCoin6";
+import DataFetching7 from "./coinFetchs/fetchCoin7";
+import DataFetching8 from "./coinFetchs/fetchCoin8.js";
+import DataFetching9 from "./coinFetchs/fetchCoin9.js";
+import DataFetching10 from "./coinFetchs/fetchCoin10";
+import DataFetchingName from './coinNameFetchs/fetchName1.js';
+import DataFetchingName2 from './coinNameFetchs/fetchName2.js';
+import DataFetchingName3 from './coinNameFetchs/fetchName3.js';
+import DataFetchingName4 from './coinNameFetchs/fetchName4.js';
+import DataFetchingName5 from './coinNameFetchs/fetchName5.js';
+import DataFetchingName6 from './coinNameFetchs/fetchName6.js';
+import DataFetchingName7 from './coinNameFetchs/fetchName7.js';
+import DataFetchingName8 from './coinNameFetchs/fetchName8.js';
+import DataFetchingName9 from './coinNameFetchs/fetchName9.js';
+import DataFetchingName10 from './coinNameFetchs/fetchName10.js';
 
 function Menu() {
-  function coinfunction() {
-    fetch("https://musicapig.herokuapp.com/coins",{
-  method:"GET",
-  headers:{
-    'Content-Type': 'application/json'
-  }
-}).then(response => response.json())
-.then(response => ()=>{
-  var moeda1 = response[0]
-  var moeda2 = response[1]
-  var moeda3 = response[2]
-  var moeda4 = response[3]
-  var moeda5 = response[4]
-  var moeda6 = response[5]
-  var moeda7 = response[6]
-  var moeda8 = response[7]
-  var moeda9 = response[8]
-  var moeda10 = response[10]
-})
-  }
 
 return (
   <div id='div-suprema'>
-    
-    {  function coinfunction() {
-      fetch("https://musicapig.herokuapp.com/coins",{
-    method:"GET",
-    headers:{
-      'Content-Type': 'application/json'
-    }
-  }).then(response => response.json())
-  .then(response => ()=>{
-    const moeda1 = response[0]
-    const moeda2 = response[1]
-    const moeda3 = response[2]
-    const moeda4 = response[3]
-    const moeda5 = response[4]
-    const moeda6 = response[5]
-    const moeda7 = response[6]
-    const moeda8 = response[7]
-    const moeda9 = response[8]
-    const moeda10 = response[10]
-  })
-    }}
-    
+  
      <div className='box1'>
         <h2 id='GBIT'>GBIT 〽️</h2>
         <div id="topics-nav">
@@ -73,18 +53,18 @@ return (
                 <p id="j">5</p>
               </div>
               <div className="coin-name spacing-table2">
-                <p id="one">Bitcoin</p>
-                <p id="two">Ethereum</p>
-                <p id="three">Tether USD</p>
-                <p id="four">USDC</p>
-                <p id="five">Binance Coin</p>
+                <DataFetchingName/>
+                <DataFetchingName2/>
+                <DataFetchingName3/>
+                <DataFetchingName4/>
+                <DataFetchingName5/>
               </div>
               <div className="coin-price spacing-table3">
-                <p id="a">23130.36361826236</p>
-                <p id="b">1650.4133277656535</p>
-                <p id="c">1.00029297992368</p>
-                <p id="d">0.9998310422880105</p>
-                <p id="e">284.8664096764542</p>
+                <DataFetching />
+                <DataFetching2/>
+                <DataFetching3/>
+                <DataFetching4/>
+                <DataFetching5/>
               </div>
               <div className="coin-number spacing-table">
                 <p>6</p>
@@ -94,23 +74,24 @@ return (
                 <p>10</p>
               </div>
               <div className="coin-name spacing-table5">
-                <p>Binance USD</p>
-                <p>XRP</p>
-                <p>Cardano</p>
-                <p>Solana</p>
-                <p>HEX</p>
+              <DataFetchingName6/>
+              <DataFetchingName7/>
+              <DataFetchingName8/>
+              <DataFetchingName9/>
+              <DataFetchingName10/>
               </div>
               <div className="coin-price spacing-table6">
-                <p>0.9997942783811001</p>
-                <p>0.3754137137610844</p>
-                <p>0.5024320127940958</p>
-                <p>41.31609432704099</p>
-                <p>0.04531988379233773</p>
+                <DataFetching6 />
+                <DataFetching7/>
+                <DataFetching8/>
+                <DataFetching9/>
+                <DataFetching10/>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <h2>Clique aqui para comprar seus Bits</h2>
   </div>
 );
   }
