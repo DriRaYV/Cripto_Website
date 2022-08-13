@@ -34,6 +34,15 @@ function Comprar() {
     });
   }
 
+  function verifyNumber() {
+    const num = Number(amount);
+    if (num != NaN && num >= 0) {
+      GetData()
+    } else {
+      alert("insira um valor numérico");
+    }
+  }
+
   return (
     <div id="fundo-escuro">
       <div id="fundo-claro">
@@ -43,7 +52,7 @@ function Comprar() {
           <br />
         </h1>
 
-        <form onSubmit={GetData} onChange={handleSubmit(getAmount)}>
+        <form onChange={handleSubmit(getAmount)}>
           <div id="information2">
             <div id="information3">
               <div className="label-div">
@@ -94,9 +103,10 @@ function Comprar() {
                   Quantidade
                   <div className="input-div">
                     <input
-                      type="number"
+                      type="text"
                       className="inputValue"
                       {...register("coin_value")}
+                      placeholder="Ex:0.0024"
                     />
                   </div>
                 </label>
@@ -104,7 +114,7 @@ function Comprar() {
             </div>
           </div>
           <div id="div-button">
-            <button type="submit" id="button2">
+            <button type="submit" id="button2" onClick={verifyNumber()}>
               Comprar
             </button>
           </div>
