@@ -15,7 +15,7 @@ function MainRoutes (){
             <Route path="/cadastro" element={<Sign />} />
             <Route path="/carteira" element={<Wallet />} />
             <Route path="/barra-de-navegação" element={<NavBar />} />
-            <Route path="/usuário" element={<User />} />
+            <Route path="/usuario" element={<User />} />
             <Route path="/inicio" element={<Menu/>} /> 
             <Route path="/comprar" element={<Comprar/>} /> 
         </Routes>
