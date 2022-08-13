@@ -28,6 +28,7 @@ function Comprar() {
     fetch("url", {
       method: "POST",
       body: {
+        token:sessionStorage.getItem('token'),
         coin: coin,
         amout: amount,
       },

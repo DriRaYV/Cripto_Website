@@ -1,6 +1,7 @@
 import "./App.css";
 import profilePicture from "./pessoa.png";
 import { Link } from "react-router-dom"
+import DataUser from "./fetchUser";
 
 function User() {
   return (
@@ -33,13 +34,7 @@ function User() {
             <p className='paragraph'>UF:</p>
           </div>
           <div id="results">
-            <p className='paragraph'>username</p>
-            <p className='paragraph'>Cep esse msm</p>
-            <p className='paragraph'>Rua dos bobos</p>
-            <p className='paragraph'>Numero 0</p>
-            <p className='paragraph'>Bairro do limoeiro</p>
-            <p className='paragraph'>Cidade de deus</p>
-            <p className='paragraph'>UFC</p>
+            <DataUser/>
           </div>
         </div>
       </div>

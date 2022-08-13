@@ -41,6 +41,8 @@ function Login () {
         // window.location('/inicio')
       } else if (status === 404) {
         alert(message)
+      }else if (status ===200){
+        sessionStorage.setItem('token', response.token)
       }
     }
     }
