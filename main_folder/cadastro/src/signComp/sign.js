@@ -43,9 +43,9 @@ function Sign() {
 
     const verifyUsername = () => {
       fetch("https://musicapig.herokuapp.com/users/exists ", {
-      headers: {
-        'Content-Type': 'application/json'
-      },
+        headers: {
+          'Content-Type': 'application/json'
+        },
       method: 'POST',
       body: JSON.stringify({
         username: username

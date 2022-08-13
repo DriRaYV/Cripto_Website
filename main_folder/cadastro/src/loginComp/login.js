@@ -38,10 +38,9 @@ function Login () {
         alert(`erro no servidor: ${console.error}`)
       } else if (status === 401) {
         alert(message)
-        // window.location('/inicio')
       } else if (status === 404) {
         alert(message)
-      }else if (status ===200){
+      }else if (status === 200){
         sessionStorage.setItem('token', response.token)
       }
     }
@@ -72,14 +71,14 @@ function Login () {
                         <label>
                             Insira sua senha:
                             <div className='input-div'>
-                                <input type="password" className='inputSenha' {... register("password")} />
+                                <input type="password" className='inputSenha' {... register("password")}  onBlur={verifyLogin}/>
                             </div>
                         </label>
                     </div>
                 </div>
             </div>
             <div id='div-button'>
-                <button type='submit' id='button2' onClick={verifyLogin}>ENTRAR</button>
+                <button type='submit' id='button2'>ENTRAR</button>
             </div>
             <h3>Não possui conta? <Link to='/cadastro'>CADASTRE-SE</Link></h3>
         </form>

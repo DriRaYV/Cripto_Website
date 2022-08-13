@@ -37,10 +37,11 @@ function Comprar() {
 
   function verifyNumber() {
     const num = Number(amount);
-    if (num != NaN && num >= 0) {
+    if (num !== isNaN(num) && num >= 0) {
       GetData()
-    } else {
-      alert("insira um valor numérico");
+    }
+    else if(num <= 0){
+      alert('insira um número maior que 0')
     }
   }
 
@@ -52,7 +53,6 @@ function Comprar() {
           <br />
           <br />
         </h1>
-
         <form onChange={handleSubmit(getAmount)}>
           <div id="information2">
             <div id="information3">
@@ -64,6 +64,7 @@ function Comprar() {
                       name="coin"
                       value={coin}
                       onChange={(coin) => setCoin(coin.target.value)}
+                      required
                     >
                       <option>Nenhuma</option>
                       <option value={"Bitcoin"}>
@@ -104,10 +105,11 @@ function Comprar() {
                   Quantidade
                   <div className="input-div">
                     <input
-                      type="text"
+                      type="number"
                       className="inputValue"
                       {...register("coin_value")}
                       placeholder="Ex:0.0024"
+                      required
                     />
                   </div>
                 </label>
