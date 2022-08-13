@@ -17,19 +17,22 @@ function Comprar() {
   const { register, handleSubmit } = useForm();
 
   const [coin, setCoin] = useState();
+  const [amount, setAmount] = useState();
 
-  function GetData(userData) {
-    alert(coin_value)
-    fetch("url",{
-      method:"POST",
-      body:{
-        coin:coin,
-        amout:coin_value
-      }
-    })
+  function getAmount(arr) {
+    const amount = `${arr.coin_value}`;
+    setAmount(amount);
   }
 
-  function rafaLinda() {}
+  function GetData() {
+    fetch("url", {
+      method: "POST",
+      body: {
+        coin: coin,
+        amout: amount,
+      },
+    });
+  }
 
   return (
     <div id="fundo-escuro">
@@ -40,14 +43,18 @@ function Comprar() {
           <br />
         </h1>
 
-        <form onSubmit={GetData}>
+        <form onSubmit={GetData} onChange={handleSubmit(getAmount)}>
           <div id="information2">
             <div id="information3">
               <div className="label-div">
                 <label>
                   Selecione a opção de compra
                   <div className="input-div">
-                    <select name="coin" value={coin} onChange={coin => setCoin(coin.target.value)}>
+                    <select
+                      name="coin"
+                      value={coin}
+                      onChange={(coin) => setCoin(coin.target.value)}
+                    >
                       <option>Nenhuma</option>
                       <option value={"Bitcoin"}>
                         <DataFetchingName />
@@ -55,7 +62,7 @@ function Comprar() {
                       <option value={"Ethereum"}>
                         <DataFetchingName2 />
                       </option>
-                      <option value={"Tether USD"}> 
+                      <option value={"Tether USD"}>
                         <DataFetchingName3 />
                       </option>
                       <option value={"USDC"}>
@@ -86,14 +93,18 @@ function Comprar() {
                 <label>
                   Quantidade
                   <div className="input-div">
-                    <input type="number" className="inputValue" {... register("coin_value")} />
+                    <input
+                      type="number"
+                      className="inputValue"
+                      {...register("coin_value")}
+                    />
                   </div>
                 </label>
               </div>
             </div>
           </div>
           <div id="div-button">
-            <button type="submit" id="button2" >
+            <button type="submit" id="button2">
               Comprar
             </button>
           </div>
