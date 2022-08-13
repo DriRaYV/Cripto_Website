@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.27.2",
-    "usehooks-ts": "^2.6.0"
+    "usehooks-ts": "^2.6.0",
+    "yarn": "^1.22.19"
   }
 }

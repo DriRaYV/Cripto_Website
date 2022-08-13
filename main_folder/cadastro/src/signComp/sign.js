@@ -43,9 +43,9 @@ function Sign() {
 
     const verifyUsername = () => {
       fetch("https://musicapig.herokuapp.com/users/exists ", {
-      headers: {
-        'Content-Type': 'application/json'
-      },
+        headers: {
+          'Content-Type': 'application/json'
+        },
       method: 'POST',
       body: JSON.stringify({
         username: username
@@ -116,7 +116,7 @@ function Sign() {
   return (
     <div id='dark-background'>
       <div id='light-background'>
-        <h1 id='title'>Vamos cadastrar o seu perfil?</h1>
+        <h1 id='title-sign'>Vamos cadastrar o seu perfil?</h1>
 
         <form id='form1' onChange={handleSubmit(GetData)}>
           <div id='information'>
@@ -142,6 +142,9 @@ function Sign() {
                     <input type="password" className='input-left' id='input-passwd2' {...register("confirmPassword")} onBlur={checkPassword} />
                   </div>
                 </label>
+                <div id='div-botao'>
+                  <button type='submit' id='bottom' onClick={submitData}>CADASTRE-SE</button>
+                </div>
               </div>
             </div>
 
@@ -198,9 +201,9 @@ function Sign() {
               </div>
             </div>
           </div>
-          <div id='div-button'>
+          {/* <div id='div-button'>
             <button type='submit' id='bottom' onClick={submitData}>CADASTRE-SE</button>
-          </div>
+          </div> */}
         </form>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import React from 'react'
 import axios from "axios"
 
-function DataFetching() {
+  function DataFetching() {
     const [posts, setPosts] = useState([0])
     useEffect(() => {
         axios.get('https://musicapig.herokuapp.com/coins')
