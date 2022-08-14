@@ -22,16 +22,21 @@ function Comprar() {
   function getAmount(arr) {
     const amount = `${arr.coin_value}`;
     setAmount(amount);
+    verifyNumber()
   }
 
   function GetData() {
-    fetch("url", {
+    sessionStorage.setItem('token', 'popopoipppipi')
+    let body = JSON.stringify({
+      token:"eyJhbGciOiJIUzI1NiJ9.Z2F0bw.KO4xSFO5eOyvYMj0f3iuPAPEY5fnU9NtXoba_piTiPs",
+      fk_coin: "oioi  ",
+      quantity: amount,
+    })
+    console.log(body);
+    alert('ana  ')
+    fetch("https://musicapig.herokuapp.com/wallet/addcoin", {
       method: "POST",
-      body: {
-        token:sessionStorage.getItem('token'),
-        coin: coin,
-        amout: amount,
-      },
+      body: body,
     });
   }
 
@@ -40,7 +45,7 @@ function Comprar() {
     if (num !== isNaN(num) && num >= 0) {
       GetData()
     }
-    else if(num <= 0){
+    else if(num <= 0){  
       alert('insira um número maior que 0')
     }
   }
@@ -53,7 +58,7 @@ function Comprar() {
           <br />
           <br />
         </h1>
-        <form onChange={handleSubmit(getAmount)}>
+        <form >
           <div id="information2">
             <div id="information3">
               <div className="label-div">
@@ -66,36 +71,36 @@ function Comprar() {
                       onChange={(coin) => setCoin(coin.target.value)}
                       required
                     >
-                      <option>Nenhuma</option>
                       <option value={"Bitcoin"}>
-                        <DataFetchingName />
-                      </option>
+                        {//<DataFetchingName />
+ }                     </option>
                       <option value={"Ethereum"}>
-                        <DataFetchingName2 />
-                      </option>
+                        {//<DataFetchingName2 />
+}                      </option>
                       <option value={"Tether USD"}>
-                        <DataFetchingName3 />
-                      </option>
+                        {//<DataFetchingName3 />
+}                      </option>
                       <option value={"USDC"}>
-                        <DataFetchingName4 />
-                      </option>
+                        {//<DataFetchingName4 />
+}                      </option>
                       <option value={"Binance Coin"}>
-                        <DataFetchingName5 />
-                      </option>
+                        {//<DataFetchingName5 />
+}                      </option>
                       <option value={"Binance USD"}>
-                        <DataFetchingName6 />
-                      </option>
+                        {//<DataFetchingName6 />
+}                      </option>
                       <option value={"XRP"}>
-                        <DataFetchingName7 />
-                      </option>
+                        {//<DataFetchingName7 />
+}                      </option>
                       <option value={"Cardano"}>
-                        <DataFetchingName8 />
-                      </option>
+                        {//<DataFetchingName8 />
+}                      </option>
                       <option value={"Solana"}>
-                        <DataFetchingName9 />
-                      </option>
+                        {//<DataFetchingName9 />
+}                      </option>
                       <option value={"HEX"}>
-                        <DataFetchingName10 />
+                        {//<DataFetchingName10 />
+                        }
                       </option>
                     </select>
                   </div>
@@ -117,7 +122,7 @@ function Comprar() {
             </div>
           </div>
           <div id="div-button">
-            <button type="submit" id="button2" onClick={verifyNumber()}>
+            <button type="submit" id="button2" onClick={handleSubmit(getAmount)}>
               Comprar
             </button>
           </div>
