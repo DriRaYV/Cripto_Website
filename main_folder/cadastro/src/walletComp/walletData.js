@@ -32,7 +32,7 @@ class DisplayTable extends React.Component{
         let tb_data = this.state.list.map((item)=>{
             return(
                 <div>
-                    <img src={item.iconUrl}/>
+                    <img src={item.iconUrl} alt='imagem'/>
                     <p>{item.coinName}: {item.amount}</p>
                 </div>
             )

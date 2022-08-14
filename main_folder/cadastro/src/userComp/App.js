@@ -18,7 +18,7 @@ function User() {
       </header>
       <div id="supDiv">
         <div id="yellow-line">
-          <img id="profile-image" src={profilePicture}></img>
+          <img id="profile-image" src={profilePicture} alt="imagem"></img>
           <div id="box-info">
             <h1 id="data">Dados Cadastrais:</h1>
           </div>

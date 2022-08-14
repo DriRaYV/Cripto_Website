@@ -60,7 +60,7 @@ function Sign() {
         alert(`erro no servidor: ${message}`)
       } else if (status === 401) {
         alert(message)
-      } else if (status === 200) {
+      } else if (status === 404) {
         alert(message)
       }
     }

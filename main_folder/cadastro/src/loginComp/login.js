@@ -31,17 +31,17 @@ function Login () {
       })
     }).then(response => verify(response))
     async function verify(response) {
-      const { message } = await response.json()
       const { status } = response
-  
-      if (status === 500) {
+      const { accessToken } = await response.json()
+      if (status === 500) { 
         alert(`erro no servidor: ${console.error}`)
       } else if (status === 401) {
-        alert(message)
+        alert("Usuário ou senha incorretos")
       } else if (status === 404) {
-        alert(message)
+        alert("Usuário ou senha incorretos")
       }else if (status === 200){
-        sessionStorage.setItem('token', response.token)
+        sessionStorage.setItem('token',accessToken)
+        window.location.replace('/inicio')
       }
     }
     }
@@ -64,14 +64,14 @@ function Login () {
                                   type="text" 
                                   id='inputUsername' 
                                   {... register("userName")}
-                                />
+                                required />
                             </div>
                         </label>
                         <br/>
                         <label>
                             Insira sua senha:
                             <div className='input-div'>
-                                <input type="password" className='inputSenha' {... register("password")}  onBlur={verifyLogin}/>
+                                <input type="password" className='inputSenha' {... register("password")} onBlur={verifyLogin} required/>
                             </div>
                         </label>
                     </div>
