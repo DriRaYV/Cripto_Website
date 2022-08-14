@@ -29,7 +29,7 @@ function Comprar() {
     sessionStorage.setItem('token', 'popopoipppipi')
     let body = JSON.stringify({
       token:"eyJhbGciOiJIUzI1NiJ9.Z2F0bw.KO4xSFO5eOyvYMj0f3iuPAPEY5fnU9NtXoba_piTiPs",
-      fk_coin: "oioi  ",
+      fk_coin: coin,
       quantity: amount,
     })
     console.log(body);
@@ -72,35 +72,34 @@ function Comprar() {
                       required
                     >
                       <option value={"Bitcoin"}>
-                        {//<DataFetchingName />
- }                     </option>
+                        <DataFetchingName />
+                      </option>
                       <option value={"Ethereum"}>
-                        {//<DataFetchingName2 />
-}                      </option>
+                        <DataFetchingName2 />
+                      </option>
                       <option value={"Tether USD"}>
-                        {//<DataFetchingName3 />
-}                      </option>
+                        <DataFetchingName3 />
+                      </option>
                       <option value={"USDC"}>
-                        {//<DataFetchingName4 />
-}                      </option>
+                        <DataFetchingName4 />
+                      </option>
                       <option value={"Binance Coin"}>
-                        {//<DataFetchingName5 />
-}                      </option>
+                        <DataFetchingName5 />
+                      </option>
                       <option value={"Binance USD"}>
-                        {//<DataFetchingName6 />
-}                      </option>
+                        <DataFetchingName6 />
+                      </option>
                       <option value={"XRP"}>
-                        {//<DataFetchingName7 />
-}                      </option>
+                        <DataFetchingName7 />
+                      </option>
                       <option value={"Cardano"}>
-                        {//<DataFetchingName8 />
-}                      </option>
+                        <DataFetchingName8 />
+                      </option>
                       <option value={"Solana"}>
-                        {//<DataFetchingName9 />
-}                      </option>
+                        <DataFetchingName9 />
+                      </option>
                       <option value={"HEX"}>
-                        {//<DataFetchingName10 />
-                        }
+                        <DataFetchingName10 />
                       </option>
                     </select>
                   </div>
