@@ -1,6 +1,7 @@
 import './sign.css';
 import {  useForm } from "react-hook-form";
 import {  useState } from 'react';
+import { Link } from "react-router-dom";
 
 function Sign() {
 
@@ -200,6 +201,9 @@ function Sign() {
                 </div>
               </div>
             </div>
+          </div>
+          <div id='div-button'>
+            <Link to="/" id='bottom-back'>VOLTAR PARA LOGIN</Link>
           </div>
         </form>
       </div>
