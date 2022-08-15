@@ -22,13 +22,13 @@ function DataUser() {
   }
   return (
     <>
-      <p className="paragraph">{fetchUser().name}</p>
-      <p className="paragraph">{fetchUser().name}</p>
-      <p className="paragraph">{fetchUser().name}</p>
-      <p className="paragraph">{fetchUser().name}</p>
-      <p className="paragraph">{fetchUser().name}</p>
-      <p className="paragraph">{fetchUser().name}</p>
-      <p className="paragraph">{fetchUser().name}</p>
+      <p className="paragraph">{fetchUser().username}</p>
+      <p className="paragraph">{fetchUser().cep}</p>
+      <p className="paragraph">{fetchUser().user_address}</p>
+      <p className="paragraph">{fetchUser().house_number}</p>
+      <p className="paragraph">{fetchUser().district}</p>
+      <p className="paragraph">{fetchUser().city}</p>
+      <p className="paragraph">{fetchUser().uf}</p>
     </>
   );
 }

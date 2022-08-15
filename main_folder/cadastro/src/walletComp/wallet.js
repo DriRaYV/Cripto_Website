@@ -1,7 +1,7 @@
 import './wallet.css';
 import  { FaWallet } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
-import { DisplayTable } from './walletData'
+import {DisplayTable} from './walletData'
 
 function Wallet () {
   return (
@@ -10,7 +10,7 @@ function Wallet () {
           <div className='box12'>
             <h2>GBIT 〽️</h2>
             <div id="topics-nav2">
-              <Link to="/usuário" className='topic1'>MEU PERFIL</Link>
+              <Link to="/usuario" className='topic1'>MEU PERFIL</Link>
               <Link to="/inicio" className='topic1'>INÍCIO</Link>
               <Link to="/carteira" className='topic1'>MINHA CARTEIRA</Link>
             </div>
@@ -22,7 +22,7 @@ function Wallet () {
           <FaWallet className='FaWallet'/>
         </div>
         <section id="section-coins">
-          <DisplayTable />
+          <DisplayTable/>
         </section>
         <footer>
           <div id="div-footer">

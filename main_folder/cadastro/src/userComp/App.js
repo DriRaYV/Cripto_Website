@@ -10,8 +10,8 @@ function User() {
         <div className="boxoka">
           <h2 id="navbar-nickname">GBIT 〽️</h2>
           <div id="topics-nav2">
-            <Link to='/usuário'className="topic1">MEU PERFIL</Link>
-            <Link to='/inicial'className="topic1">INÍCIO</Link>
+            <Link to='/usuario'className="topic1">MEU PERFIL</Link>
+            <Link to='/inicio'className="topic1">INÍCIO</Link>
             <Link to='/carteira'className="topic1">CARTEIRA</Link>
           </div>
         </div>

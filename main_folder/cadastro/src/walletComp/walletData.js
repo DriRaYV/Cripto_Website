@@ -1,51 +1,82 @@
 import React from "react";
-import { get } from "react-hook-form";
 
-class DisplayTable extends React.Component{
 
-    constructor(props){
+class DisplayTable extends React.Component {
+
+    constructor(props) {
         super(props)
         this.state = {
-            list:[]
+            list: []
         }
         this.callAPI = this.callAPI.bind(this)
-        this.callAPI()
-    }
 
-    callAPI(){
-        fetch('https://musicapig.herokuapp.com/wallet',
-        {
-            headers: {
-                'Content-Type': 'application/json'
-              },
-            method:"post",
-            body:JSON.stringify({
-                token:sessionStorage.getItem("token")
-            })
-        }
+    }
+    callAPI() {
+        fetch("https://musicapig.herokuapp.com/wallet",
+            {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: "post",
+                body: JSON.stringify({
+                    token: sessionStorage.getItem("token")
+                })
+            }
         ).then(
-            (response)=> response.json()
-        ).then((data)=>{
+            (response) => response.json()
+        ).then((data) => {
             this.setState({
-                list:data.data
+                list: data
             })
         })
     }
 
-    render(){
-        let tb_data = this.state.list.map((item)=>{
-            return(
-                <div>
-                    <p>{item.fk_coin}: {item.quantity}</p>
-                </div>
+    render() {
+        if (!this.state?.list?.buying) this.callAPI()
+        if (this.state?.list?.buying) {
+            let S = this.state.list
+            function makediv() {
+                let bcoin = S.buying[k]
+                let i = 0;
+                return (
+                    <section>
+                        <p key={i++}>{bcoin.fk_coin}: {bcoin.quantity}</p>
+
+                    </section>
+                )
+            }
+            var table = [];
+            function T() {
+                console.log(table)
+                return table
+            }
+            for (var k = 0; k < this.state.list.buying.length; k++) {
+                table.push(makediv());
+            }
+            return (
+                <>
+                    <div>
+                        {T()}
+                    </div>
+                    <br />
+                </>
             )
-        })
-        return(
-            <div>
-                {tb_data}
-            </div>
-        )
+
+            // let tb_data = this.state.list.buying.map((item)=>{
+            //     console.log('aaaa', item)
+            //     return(
+            //         <div>
+            //             <p>{item.fk_coin}: {item.quantity}</p>
+            //         </div>
+            //     )
+            // })
+            // return(
+            //     <div>
+            //         {tb_data}
+            //     </div>
+            // )
+        }
     }
 }
 
-export { DisplayTable };
+export { DisplayTable }

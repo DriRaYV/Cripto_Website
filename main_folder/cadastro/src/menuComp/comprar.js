@@ -12,17 +12,23 @@ function Comprar() {
   function getAmount(arr) {
     const amount = `${arr.coin_value}`;
     setAmount(amount);
+    verifyNumber()
   }
 
   function GetData() {
-    fetch("https://musicapig.herokuapp.com/wallet/addcoin", {
-      method: "POST",
-      body: {
-        token:sessionStorage.getItem('token'),
-        bitname: coin,
-        quant: amount,
-      },
+    let body = JSON.stringify({
+      token:sessionStorage.getItem("token"),
+      fk_coin: coin,
+      quantity: amount,
     })
+
+    fetch("https://musicapig.herokuapp.com/wallet/addcoin", {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: body,
+    });
   }
 
 
@@ -31,7 +37,7 @@ function Comprar() {
     if (num !== isNaN(num) && num >= 0 && coin !== undefined) {
       GetData()
     }
-    else if(num <= 0){
+    else if(num <= 0){  
       alert('insira um número maior que 0')
     }
   }
@@ -44,7 +50,7 @@ function Comprar() {
           <br />
           <br />
         </h1>
-        <form onBlur={handleSubmit(getAmount)}>
+        <form >
           <div id="information2">
             <div id="information3">
               <div className="label-div">
@@ -57,7 +63,6 @@ function Comprar() {
                       onChange={(coin) => setCoin(coin.target.value)}
                       required
                     >
-                      <option>Nenhuma</option>
                       <option value={"Bitcoin"}>
                         Bitcoin
                       </option>
@@ -108,7 +113,7 @@ function Comprar() {
             </div>
           </div>
           <div id="div-button">
-            <button type="submit" id="button2">
+            <button type="submit" id="button2" onClick={handleSubmit(getAmount)}>
               Comprar
             </button>
           </div>
