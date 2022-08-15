@@ -91,7 +91,7 @@ return (
           </div>
         </div>
       </div>
-      <h2>Clique aqui para comprar seus Bits</h2>
+      <h2>Clique <Link to='/comprar' id="link">aqui</Link> para comprar seus Bits</h2>
   </div>
 );
   }
