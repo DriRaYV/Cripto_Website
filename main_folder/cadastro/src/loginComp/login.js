@@ -78,7 +78,7 @@ function Login () {
                 </div>
             </div>
             <div id='div-button'>
-                <button type='submit' id='button2'>ENTRAR</button>
+                <div  id='button2' >ENTRAR</div>
             </div>
             <h3>Não possui conta? <Link to='/cadastro'>CADASTRE-SE</Link></h3>
         </form>
