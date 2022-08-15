@@ -30,7 +30,7 @@ return (
      <div className='box1'>
         <h2 id='GBIT'>GBIT 〽️</h2>
         <div id="topics-nav">
-            <Link to="/usuário" className='topic1'>MEU PERFIL</Link>
+            <Link to="/usuario" className='topic1'>MEU PERFIL</Link>
             <Link to="/inicio" className='topic1'>INÍCIO</Link>
             <Link to="/carteira" className='topic1'>MINHA CARTEIRA</Link>
       </div>
