@@ -4,6 +4,9 @@
 
 }
 
+section > p{
+    color: #FFB742;
+}
 
 body{
     --cor-background-escuro: #2B2A2A;

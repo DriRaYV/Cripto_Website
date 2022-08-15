@@ -1,5 +1,5 @@
 import React from "react";
-
+import './wallet.css'
 
 class DisplayTable extends React.Component {
 
