@@ -2,6 +2,7 @@ import './wallet.css';
 import  { FaWallet } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import wallet from './wallet.png';
+import {DisplayTable} from './walletData'
 
 function Wallet () {
   return (
@@ -22,15 +23,7 @@ function Wallet () {
           <FaWallet className='FaWallet'/>
         </div>
         <section id="section-coins">
-          <img alt='' src={wallet} className="svg-coin"/>
-           <p className='coins-name'>Bitcoin  </p>
-           <p className='coins-quantity'>2 de moeda </p>
-           <img alt='' src={wallet} className="svg-coin"/>
-           <p className='coins-name'>Ethereum</p>
-           <p className='coins-quantity'>10 de moeda</p>
-
-
-
+          <DisplayTable/>
         </section>
         <footer>
           <div id="div-footer">

@@ -12,19 +12,19 @@ class DisplayTable extends React.Component{
     }
 
     callAPI(){
-        fetch(//!URL_API*/,
+        fetch("https://musicapig.herokuapp.com/wallet",
         {
             method:"post",
-            body:{
-                token:sessionStorage.getItem('token')
-            }
+            body:JSON.stringify({
+                token:"eyJhbGciOiJIUzI1NiJ9.cGFwYWk.oCuDwte_iHqfKJlvKhIJCaa1kHw0kwab7rm2r2-3TRM"
+            })
         }
         ).then(
             (response)=> response.json()
         ).then((data)=>{
-            this.setState({
+            this.state = {
                 list:data.data
-            })
+            }
         })
     }
 
@@ -44,3 +44,5 @@ class DisplayTable extends React.Component{
         )
     }
 }
+
+export {DisplayTable}
