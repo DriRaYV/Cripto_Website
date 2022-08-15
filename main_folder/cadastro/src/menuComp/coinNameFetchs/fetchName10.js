@@ -3,7 +3,7 @@ import React from 'react'
 import axios from "axios"
 
 function DataFetchingName10() {
-    const [names10, Setnames10] = useState([0])
+    const [names10, Setnames10] = useState([""])
     useEffect(() => {
         axios.get('https://musicapig.herokuapp.com/coins')
             .then(res => {

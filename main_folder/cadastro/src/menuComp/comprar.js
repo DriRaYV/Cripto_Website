@@ -2,16 +2,6 @@ import "./comprar.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import DataFetchingName from "./coinNameFetchs/fetchName1.js";
-import DataFetchingName2 from "./coinNameFetchs/fetchName2.js";
-import DataFetchingName3 from "./coinNameFetchs/fetchName3.js";
-import DataFetchingName4 from "./coinNameFetchs/fetchName4.js";
-import DataFetchingName5 from "./coinNameFetchs/fetchName5.js";
-import DataFetchingName6 from "./coinNameFetchs/fetchName6.js";
-import DataFetchingName7 from "./coinNameFetchs/fetchName7.js";
-import DataFetchingName8 from "./coinNameFetchs/fetchName8.js";
-import DataFetchingName9 from "./coinNameFetchs/fetchName9.js";
-import DataFetchingName10 from "./coinNameFetchs/fetchName10.js";
 
 function Comprar() {
   const { register, handleSubmit } = useForm();
@@ -25,19 +15,20 @@ function Comprar() {
   }
 
   function GetData() {
-    fetch("url", {
+    fetch("https://musicapig.herokuapp.com/wallet/addcoin", {
       method: "POST",
       body: {
         token:sessionStorage.getItem('token'),
-        coin: coin,
-        amout: amount,
+        bitname: coin,
+        quant: amount,
       },
-    });
+    })
   }
+
 
   function verifyNumber() {
     const num = Number(amount);
-    if (num !== isNaN(num) && num >= 0) {
+    if (num !== isNaN(num) && num >= 0 && coin !== undefined) {
       GetData()
     }
     else if(num <= 0){
@@ -53,7 +44,7 @@ function Comprar() {
           <br />
           <br />
         </h1>
-        <form onChange={handleSubmit(getAmount)}>
+        <form onBlur={handleSubmit(getAmount)}>
           <div id="information2">
             <div id="information3">
               <div className="label-div">
@@ -68,34 +59,34 @@ function Comprar() {
                     >
                       <option>Nenhuma</option>
                       <option value={"Bitcoin"}>
-                        <DataFetchingName />
+                        Bitcoin
                       </option>
                       <option value={"Ethereum"}>
-                        <DataFetchingName2 />
+                        Ethereum
                       </option>
                       <option value={"Tether USD"}>
-                        <DataFetchingName3 />
+                          Tether USD
                       </option>
                       <option value={"USDC"}>
-                        <DataFetchingName4 />
+                        USDC
                       </option>
                       <option value={"Binance Coin"}>
-                        <DataFetchingName5 />
+                        Binance Coin
                       </option>
                       <option value={"Binance USD"}>
-                        <DataFetchingName6 />
+                        Binance USD
                       </option>
                       <option value={"XRP"}>
-                        <DataFetchingName7 />
+                        XRP
                       </option>
                       <option value={"Cardano"}>
-                        <DataFetchingName8 />
+                        Cardano
                       </option>
                       <option value={"Solana"}>
-                        <DataFetchingName9 />
+                        Solana
                       </option>
                       <option value={"HEX"}>
-                        <DataFetchingName10 />
+                        HEX
                       </option>
                     </select>
                   </div>
@@ -108,7 +99,7 @@ function Comprar() {
                       type="number"
                       className="inputValue"
                       {...register("coin_value")}
-                      placeholder="Ex:0.0024"
+                      placeholder="Ex:0.0024" onBlur={verifyNumber()}
                       required
                     />
                   </div>
@@ -117,7 +108,7 @@ function Comprar() {
             </div>
           </div>
           <div id="div-button">
-            <button type="submit" id="button2" onClick={verifyNumber()}>
+            <button type="submit" id="button2">
               Comprar
             </button>
           </div>

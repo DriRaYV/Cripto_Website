@@ -3,9 +3,15 @@ import React from "react";
 import axios from "axios";
 
 function DataUser() {
+  const token = sessionStorage.getItem('token')
+  const axiosConfig = {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  }
   const [userData, SetUserData] = useState("");
   useEffect(() => {
-    axios.get("https://musicapig.herokuapp.com///!").then((res) => {
+    axios.post("https://musicapig.herokuapp.com/users/perfil",{token:token},axiosConfig).then((res) => {
       const resp = res.data;
       SetUserData(resp);
     });

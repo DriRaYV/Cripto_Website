@@ -3,7 +3,7 @@ import React from 'react'
 import axios from "axios"
 
  function DataFetching2() {
-    const [moeda1, setMoeda1 ] = useState([])
+    const [moeda1, setMoeda1 ] = useState([""])
 
     useEffect(() => {
         axios.get('https://musicapig.herokuapp.com/coins')

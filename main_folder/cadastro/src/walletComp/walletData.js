@@ -1,4 +1,5 @@
 import React from "react";
+import { get } from "react-hook-form";
 
 class DisplayTable extends React.Component{
 
@@ -12,12 +13,15 @@ class DisplayTable extends React.Component{
     }
 
     callAPI(){
-        fetch(//!URL_API*/,
+        fetch('https://musicapig.herokuapp.com/wallet',
         {
+            headers: {
+                'Content-Type': 'application/json'
+              },
             method:"post",
-            body:{
-                token:sessionStorage.getItem('token')
-            }
+            body:JSON.stringify({
+                token:sessionStorage.getItem("token")
+            })
         }
         ).then(
             (response)=> response.json()
@@ -32,8 +36,7 @@ class DisplayTable extends React.Component{
         let tb_data = this.state.list.map((item)=>{
             return(
                 <div>
-                    <img src={item.iconUrl} alt='imagem'/>
-                    <p>{item.coinName}: {item.amount}</p>
+                    <p>{item.fk_coin}: {item.quantity}</p>
                 </div>
             )
         })
@@ -44,3 +47,5 @@ class DisplayTable extends React.Component{
         )
     }
 }
+
+export { DisplayTable };

@@ -201,9 +201,6 @@ function Sign() {
               </div>
             </div>
           </div>
-          {/* <div id='div-button'>
-            <button type='submit' id='bottom' onClick={submitData}>CADASTRE-SE</button>
-          </div> */}
         </form>
       </div>
     </div>
