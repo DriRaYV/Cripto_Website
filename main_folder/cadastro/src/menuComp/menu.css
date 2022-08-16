@@ -5,9 +5,12 @@ body{
 background-color: #212529;
 }
 
+
+
 #welcome-title{
     text-align: center;
     color: #fff;
+    margin-bottom: -8%;
 }
 #subtitle{
     text-align: center;

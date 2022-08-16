@@ -21,6 +21,7 @@ import DataFetchingName7 from './coinNameFetchs/fetchName7.js';
 import DataFetchingName8 from './coinNameFetchs/fetchName8.js';
 import DataFetchingName9 from './coinNameFetchs/fetchName9.js';
 import DataFetchingName10 from './coinNameFetchs/fetchName10.js';
+import DataUsername from "./fetchUsername";
 
 function Menu() {
 
@@ -28,7 +29,7 @@ return (
   <div id='div-suprema'>
   
      <div className='box1'>
-        <h2 id='GBIT'>GBIT 〽️</h2>
+        <h2 id='GBIT'>GBIT 〽️</h2> 
         <div id="topics-nav">
             <Link to="/usuario" className='topic1'>MEU PERFIL</Link>
             <Link to="/inicio" className='topic1'>INÍCIO</Link>
@@ -37,7 +38,8 @@ return (
     </div>
     <div id="cotainer">
         <div id="welcome-title">
-          <h1>Olá, Maria! 👋</h1>
+          <h1>Olá!👋</h1> 
+          <br/> <DataUsername/>
         </div>
         <div id="subtitle">
           <h3> Vai um Bit?</h3>

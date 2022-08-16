@@ -5,7 +5,7 @@ import axios from "axios";
 function DataUser() {
   const token = sessionStorage.getItem('token')
 
-  const [userData, SetUserData] = useState("");
+  const [userDataName, SetUserDataName] = useState("");
   useEffect(() => {
 
     fetch("https://musicapig.herokuapp.com/users/perfil", {
@@ -19,14 +19,14 @@ function DataUser() {
     }).then(res => res.json())
     .then((response) => {
       let res = response.userInfo[0]
-      SetUserData(res)
-      console.log(res)
+      SetUserDataName(res)
+
     });
   }
   );
   
   function fetchUser() {
-    return userData;
+    return userDataName;
   }
   return (
     <>

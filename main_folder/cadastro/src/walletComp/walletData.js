@@ -47,7 +47,6 @@ class DisplayTable extends React.Component {
             }
             var table = [];
             function T() {
-                console.log(table)
                 return table
             }
             for (var k = 0; k < this.state.list.buying.length; k++) {
@@ -55,7 +54,7 @@ class DisplayTable extends React.Component {
             }
             return (
                 <>
-                    <div>
+                    <div key={k++}>
                         {T()}
                     </div>
                     <br />
