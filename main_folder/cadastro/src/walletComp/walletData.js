@@ -62,21 +62,10 @@ class DisplayTable extends React.Component {
                 </>
             )
 
-            // let tb_data = this.state.list.buying.map((item)=>{
-            //     console.log('aaaa', item)
-            //     return(
-            //         <div>
-            //             <p>{item.fk_coin}: {item.quantity}</p>
-            //         </div>
-            //     )
-            // })
-            // return(
-            //     <div>
-            //         {tb_data}
-            //     </div>
-            // )
         }
     }
 }
+
+
 
 export { DisplayTable }

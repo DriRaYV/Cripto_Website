@@ -2,6 +2,7 @@ import './wallet.css';
 import  { FaWallet } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import {DisplayTable} from './walletData'
+import {counter} from './walletData'
 
 function Wallet () {
   return (
@@ -26,7 +27,9 @@ function Wallet () {
         </section>
         <footer>
           <div id="div-footer">
-            <p id="p-coin-market"><span id="p-span-yllw">VALOR TOTAL EM BRL:</span>387246396</p>
+            <p id="p-coin-market"><span id="p-span-yllw">VALOR TOTAL EM BRL:</span>
+            <counter/>
+            </p>
           </div>
         </footer>
      </main> 
