@@ -1,8 +1,0 @@
-Telas que serão desenhadas:
-    - Login: 
-    - Cadastro: Okamoto
-    - Inicial: Isabella
-    - Carteira: Rafaella
-    - Perfil:
-
-Framework utilizado: React.JS
